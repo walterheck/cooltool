@@ -18,10 +18,9 @@ findHostNameCmd = "hostname"
 print "Connecting to Legacy box " + legacyIp + " using " + legacyUsername + "/" + legacyPassword + "\n"
 
 # Connect to the legcy system
-Net::SSH.start( legacyIp, legacyUsername, legacyPassword,
+Net::SSH.start( legacyIp, legacyUsername, 
+                :password => legacyPassword,
                 :port     => legacyPort
-                # :host_key => 'ssh-rsa',
-                # :keys     => legacyKey
                 ) do |ssh|
   print "Connected!\n"
 
