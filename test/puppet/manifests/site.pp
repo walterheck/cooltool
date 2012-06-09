@@ -1,4 +1,4 @@
-node 'debian_test_node' {
+node 'vagrant-debian-squeeze' {
 	package{ 'apache2':
 		ensure => installed
 	}
